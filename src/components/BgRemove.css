@@ -1,0 +1,286 @@
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Left Section */
+.style1 {
+  max-width: 500px;
+  width: 90%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+}
+
+.image {
+  width: 300px;
+  height: 285px;
+  position: relative;
+  border-radius: 10px;
+  background-image: url("../assets/transparent2.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.image1,
+.image2 {
+  width: 100%;
+  position: absolute;
+  border-radius: 10px;
+}
+
+#withBgImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  animation: shrink 15s linear infinite;
+}
+
+.text {
+  text-align: center;
+}
+
+.heading {
+  font-weight: 600;
+  font-size: 40px;
+  color: #333;
+}
+
+.subtext {
+  font-size: 1.5rem;
+  color: #666;
+}
+
+/* Right Section */
+.style2 {
+  max-width: 500px;
+  width: 90%;
+  min-height: 500px;
+}
+
+.upload-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px 20px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  transition: 0.3s;
+}
+
+.upload-box {
+  width: 100%;
+  padding: 60px 20px;
+  border: 2px dashed #d0d0d0;
+  border-radius: 16px;
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 15px;
+  transition: all 0.3s;
+}
+
+.upload-box:hover {
+  border-color: #4e91ff;
+  background: #f0f8ff;
+}
+
+.drag-active {
+  border-color: #0077ff;
+  background: #e7f2ff;
+}
+
+.upload-placeholder {
+  text-align: center;
+  color: #555;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.upload-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.uploaded-img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: contain;
+}
+
+#upload-btn {
+  padding: 12px 40px;
+  background: #1475f5;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#upload-btn:hover {
+  background: #0f5dc2;
+}
+
+.loader-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  gap: 15px;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #ccc;
+  border-top-color: #1475f5;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Output */
+.output {
+  width: 85%;
+  text-align: center;
+}
+
+.result-img {
+  width: 100%;
+  max-height: 400px;
+  margin-top: 10px;
+  border-radius: 12px;
+  object-fit: contain;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.download-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #4e91ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background: #3a77d8;
+}
+
+/* Preset Background Color Buttons */
+.bg-color-options {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.bg-color-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.bg-color-btn:hover {
+  transform: scale(1.1);
+  border-color: #1475f5;
+}
+
+.bg-color-btn.active {
+  border: 3px solid #1475f5;
+  box-shadow: 0 0 8px rgba(20, 117, 245, 0.6);
+}
+
+/* Custom Color Picker */
+.color-picker {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 10px;
+}
+
+/* Background Image Upload Button */
+.upload-btn input[type="file"] {
+  display: none;
+}
+
+.upload-btn {
+  padding: 10px 20px;
+  background-color: #4e91ff;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: inline-block;
+}
+
+.upload-btn:hover {
+  background-color: #3a77d8;
+}
+
+/* Animation for left preview */
+@keyframes shrink {
+  0%,
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+  50% {
+    clip-path: inset(0 100% 0 0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .style1,
+  .style2 {
+    width: 95%;
+    max-width: 400px;
+  }
+}
